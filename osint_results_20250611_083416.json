@@ -1,0 +1,210 @@
+{
+  "search_summary": {
+    "total_searches": 3,
+    "successful_searches": 3,
+    "failed_searches": 0,
+    "total_response_time": 8.19685411453247,
+    "timestamp": "2025-06-11T08:34:16.561326"
+  },
+  "results_by_service": {
+    "UtilityOSINT": [
+      {
+        "query": "https://bit.ly/example",
+        "query_type": "url_expansion",
+        "success": true,
+        "data": {
+          "expansion_results": {
+            "getlinkinfo": {
+              "status": "failed",
+              "status_code": 403,
+              "service_url": "http://www.getlinkinfo.com/info?link=https%3A//bit.ly/example"
+            },
+            "checkshorturl": {
+              "status": "success",
+              "expanded_url": null,
+              "service_url": "https://checkshorturl.com/expand.php?u=https%3A//bit.ly/example"
+            },
+            "expandurl": {
+              "status": "success",
+              "expanded_url": null,
+              "service_url": "https://www.expandurl.net/expand?url=https%3A//bit.ly/example"
+            }
+          }
+        },
+        "error": null,
+        "response_time": 2.3527028560638428
+      },
+      {
+        "query": "123456789012",
+        "query_type": "pokemon_go_trainer_code",
+        "success": true,
+        "data": {
+          "search_urls": {
+            "google": "https://www.google.com/search?q=\"123456789012\"",
+            "reddit": "https://www.reddit.com/r/PokemonGoFriends/search/?q=123456789012&restrict_sr=1",
+            "twitter": "https://twitter.com/search?q=123456789012"
+          },
+          "pokemon_go_resources": {
+            "pogotrainer": "https://pogotrainer.club/",
+            "gamepress": "https://gamepress.gg/pokemongo/trainer-codes-list",
+            "pokelytics": "https://pokelytics.com/",
+            "openstreetmap": "https://www.openstreetmap.org/"
+          }
+        },
+        "error": null,
+        "response_time": 7.3909759521484375e-06
+      }
+    ],
+    "ImageAnalysisOSINT": [
+      {
+        "query": "https://example.com/image.jpg",
+        "query_type": "reverse_image",
+        "success": true,
+        "data": {
+          "reverse_search_results": {
+            "google": {
+              "service_name": "Google Images",
+              "search_url": "https://www.google.com/searchbyimage?&image_url=https%3A//example.com/image.jpg",
+              "status_code": 200,
+              "accessible": true,
+              "response_size": 185407,
+              "has_results": true
+            },
+            "yandex": {
+              "service_name": "Yandex Images",
+              "search_url": "https://yandex.com/images/search?source=collections&rpt=imageview&url=https%3A//example.com/image.jpg",
+              "status_code": 200,
+              "accessible": true,
+              "response_size": 408347,
+              "has_results": true
+            },
+            "tineye": {
+              "service_name": "TinEye",
+              "search_url": "https://www.tineye.com/search/?url=https%3A//example.com/image.jpg",
+              "status_code": 403,
+              "accessible": false,
+              "response_size": 7342
+            },
+            "bing": {
+              "service_name": "Bing Images",
+              "search_url": "https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIIRP&sbisrc=UrlPaste&q=imgurl:https%3A//example.com/image.jpg",
+              "status_code": 200,
+              "accessible": true,
+              "response_size": 752486,
+              "has_results": false
+            },
+            "baidu": {
+              "service_name": "Baidu Images",
+              "search_url": "https://graph.baidu.com/details?isfromtusoupc=1tn=pc&carousel=0&image=https%3A//example.com/image.jpg",
+              "status_code": 200,
+              "accessible": true,
+              "response_size": 21310,
+              "has_results": true
+            }
+          },
+          "total_accessible_services": 4
+        },
+        "error": null,
+        "response_time": 5.844143867492676
+      }
+    ]
+  },
+  "key_findings": [
+    {
+      "service": "UtilityOSINT",
+      "query": "https://bit.ly/example",
+      "type": "url_expansion",
+      "finding": "Successfully found data on UtilityOSINT",
+      "details": {
+        "expansion_results": {
+          "getlinkinfo": {
+            "status": "failed",
+            "status_code": 403,
+            "service_url": "http://www.getlinkinfo.com/info?link=https%3A//bit.ly/example"
+          },
+          "checkshorturl": {
+            "status": "success",
+            "expanded_url": null,
+            "service_url": "https://checkshorturl.com/expand.php?u=https%3A//bit.ly/example"
+          },
+          "expandurl": {
+            "status": "success",
+            "expanded_url": null,
+            "service_url": "https://www.expandurl.net/expand?url=https%3A//bit.ly/example"
+          }
+        }
+      }
+    },
+    {
+      "service": "ImageAnalysisOSINT",
+      "query": "https://example.com/image.jpg",
+      "type": "reverse_image",
+      "finding": "Successfully found data on ImageAnalysisOSINT",
+      "details": {
+        "reverse_search_results": {
+          "google": {
+            "service_name": "Google Images",
+            "search_url": "https://www.google.com/searchbyimage?&image_url=https%3A//example.com/image.jpg",
+            "status_code": 200,
+            "accessible": true,
+            "response_size": 185407,
+            "has_results": true
+          },
+          "yandex": {
+            "service_name": "Yandex Images",
+            "search_url": "https://yandex.com/images/search?source=collections&rpt=imageview&url=https%3A//example.com/image.jpg",
+            "status_code": 200,
+            "accessible": true,
+            "response_size": 408347,
+            "has_results": true
+          },
+          "tineye": {
+            "service_name": "TinEye",
+            "search_url": "https://www.tineye.com/search/?url=https%3A//example.com/image.jpg",
+            "status_code": 403,
+            "accessible": false,
+            "response_size": 7342
+          },
+          "bing": {
+            "service_name": "Bing Images",
+            "search_url": "https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIIRP&sbisrc=UrlPaste&q=imgurl:https%3A//example.com/image.jpg",
+            "status_code": 200,
+            "accessible": true,
+            "response_size": 752486,
+            "has_results": false
+          },
+          "baidu": {
+            "service_name": "Baidu Images",
+            "search_url": "https://graph.baidu.com/details?isfromtusoupc=1tn=pc&carousel=0&image=https%3A//example.com/image.jpg",
+            "status_code": 200,
+            "accessible": true,
+            "response_size": 21310,
+            "has_results": true
+          }
+        },
+        "total_accessible_services": 4
+      }
+    },
+    {
+      "service": "UtilityOSINT",
+      "query": "123456789012",
+      "type": "pokemon_go_trainer_code",
+      "finding": "Successfully found data on UtilityOSINT",
+      "details": {
+        "search_urls": {
+          "google": "https://www.google.com/search?q=\"123456789012\"",
+          "reddit": "https://www.reddit.com/r/PokemonGoFriends/search/?q=123456789012&restrict_sr=1",
+          "twitter": "https://twitter.com/search?q=123456789012"
+        },
+        "pokemon_go_resources": {
+          "pogotrainer": "https://pogotrainer.club/",
+          "gamepress": "https://gamepress.gg/pokemongo/trainer-codes-list",
+          "pokelytics": "https://pokelytics.com/",
+          "openstreetmap": "https://www.openstreetmap.org/"
+        }
+      }
+    }
+  ],
+  "urls_discovered": [],
+  "profiles_found": []
+}
